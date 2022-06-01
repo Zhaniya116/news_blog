@@ -1,12 +1,11 @@
 <?php
-	if (session_status() === PHP_SESSION_NONE) { //valid only for PHP >= 5.4.0 , PHP 7, PHP 8
+	if (session_status() === PHP_SESSION_NONE) { 
 		session_start();
 	}
 	
 	echo '<link rel="stylesheet" href="css/my_style.css" type="text/css">';
 	
 	$mysqli = new mysqli("localhost","root","","newsblog");
-	// Check connection
 	if ($mysqli -> connect_errno) {
 	  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
 	  exit();
