@@ -32,6 +32,13 @@
 	
 ?>
 
+<h1>Publish news</h1>
+<span> <?php echo $error;?> </span>
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+	Title: <input type="text" name="title"><br>
+	<textarea name="description"> </textarea>
+<input type="submit" value="Publish">
+</form>
 
 </body>
 
